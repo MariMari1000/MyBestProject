@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      G00411236
+    </ion-title>
+    <!-- the icon is placed on the left of the navbar -->
+    <ion-buttons slot="start">
+      <!-- Click on the icon opens the settings page -->
+      <button ion-button (click)="openSettingsPage()">
+        <!-- The design of the icon is in the attribute "name" -->
+        <ion-icon name="settings"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- the data on the home page is displayed throught the function getQuotes() -->
+  <h4>Quote from {{ author }} about:</h4>
+  <ion-list >
+    <ion-item >
+      <ul >
+        <!-- in order to display all the tags in an unordered list, *ngFor was used -->
+        <li *ngFor="let tags of tags">
+          {{ tags }}
+        </li>
+      </ul>
+    </ion-item>
+  </ion-list>   
+  
+  <h5>{{ content }}</h5>
+
+  <hr>
+  <h2>Country ID doesn't exist</h2>
+
+  <br>
+  <!-- this button opens the settings page -->
+  <button ion-button round (click)="openSettingsPage()">Open settings page</button>
+
+</ion-content>

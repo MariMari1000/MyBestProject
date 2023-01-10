@@ -1,0 +1,11 @@
+page-settings {
+  // this code was used to create borders of a table with playes' info
+    table, th, td {
+        border: 1px solid black;
+      }
+      ion-grid, ion-row,  ion-col {
+        border: 1px solid black;
+
+      }
+
+}
